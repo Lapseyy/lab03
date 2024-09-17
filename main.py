@@ -15,8 +15,8 @@ def menu():
     # choice = input(" Enter menu choice: ")   
  
 def main():
-    contacts_list = [["Richard","Stallman"],["Bill","Gates"]]
-    # contacts_list = []
+    # contacts_list = [["Richard","Stallman"],["Bill","Gates"]]
+    contacts_list = []
     while True:
         menu()
         choice = input("Enter menu choice: ")
@@ -40,19 +40,19 @@ def main():
             
             elif choice == 4:
                 # print("4 Choice is selected.")
-                contact_list = contacts.delete_contact(contacts_list, index="")
+                contact_list = contacts.delete_contact(contacts_list, index=input())
                 
             elif choice == 5:
                 # print("5 Choice is selected.")
                 # sort by first name
-                contact_list = contacts.sort_contacts(contacts_list, column= "0") 
-                pass
+                contact_list = contacts.sort_contacts(contacts_list, column=input()) 
+                
             
             elif choice == 6:
                 # print("6 Choice is selected.")
                 # sort by last name
-                contact_list = contacts.sort_contacts(contacts_list, column= 1) 
-                pass
+                contact_list = contacts.sort_contacts(contacts_list, column=input()) 
+                
                 
             elif choice == 7:
                 # print("5 Choice is selected.")

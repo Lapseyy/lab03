@@ -24,51 +24,49 @@ def modify_contact(contacts, first_name, last_name, index):
     if str(index).isdigit():
         index = int(index)
         if index >= 0 and index < len(contacts):
-            first_name = input("Enter first name: ")
-            last_name = input("Enter last name: ")
+            # first_name = input("Enter first name: ")
+            # last_name = input("Enter last name: ")
             contacts[index] = [first_name, last_name]
-        else: 
-            print("Invalid index number.")
-    else:
-        print("Invalid index number.")
-    return contacts
+            return True
+    #     else: 
+    #         print("Invalid index number.")
+    # else:
+    #     print("Invalid index number.")
+    return False
         
 def delete_contact(contacts, index):
     """Delete contacts in contacts. Args: delete_contacts (contacts): _description_"""
     
-    index = input("List index number to delete: ")
+    # index = input("List index number to delete: ")
     if str(index).isdigit():
         index = int(index)
         if index >=0 and index < len(contacts):
             contacts.pop(index)
-        else:
-            # print("Invalid index number.")
-            return contacts
-    else:
-        #print("Invalid index number.")
-        return contacts
-    return contacts
+            
+            return True
+    # else:
+    #     #print("Invalid index number.")
+    #     return contacts
+    return False
 def sort_contacts(contacts, column):
     # column = input()
     if str(column).isdigit():
         column = int(column)
-        # list =[]
-        #alphabetize = lambda column: sorted(contacts, reverse= False)
-        #alphabetize = lambda column: sorted(contacts, reverse= False)
-        alphabetize = sorted(contacts, key = lambda x: x[1], reverse=False)
+        # alphabetize = sorted(contacts, key = lambda x: x[1], reverse=False)
         if column == 0:
-            #return sorted(contacts, key = lambda contacts: contacts[0] )
-            alphabetize = sorted(contacts, key = lambda x: x[1])
-            contacts.sort(key=lambda x: x[1])
-            return alphabetize
+            contacts.sort(key = lambda x: x[0])
+            #contacts.sort(key=lambda x: x[1])
+            #return alphabetize
         else:
-            last_reverse = sorted(contacts, key = lambda x: x[1], reverse= True)
-            contacts.sort(key=lambda x: x[1])
-            return
+            # last_reverse = sorted(contacts, key = lambda x: x[1])
+            # contacts.sort(key=lambda x: x[1])
+            contacts.sort(key = lambda x: x[1])
+
+            #return
         
         #sorted(contacts, key = lambda contacts: contacts[1] )
     
-    return contacts
+    # return contacts
 
 # def multiple(n):
 #     return lambda x: X + n
